@@ -3,13 +3,11 @@ import {test, expect } from "@playwright/test"
 test("Broken link", async({page, request})=>{
     const Url = "https://rahulshettyacademy.com/brokenlink"
     await page.goto(Url)
-
    const elements =  await page.locator('a').all()
 
    for(const element of elements){
     const link:any = await element.getAttribute("href")
     
-
     if(!link) {
         continue
     }
