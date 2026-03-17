@@ -16,4 +16,4 @@ export class CartPage{
     async ClickonCheckout(){
         await this.checkout.click()
     }
-}
+} // new  line
